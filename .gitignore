@@ -1,0 +1,14 @@
+# Local RVC runtime, models, and downloaded weights stay on this PC only.
+.rvc-runtime/
+.pth file Model/
+rvc_assets/
+rvc_bridge.py
+
+# Generated files and logs
+__pycache__/
+*.py[cod]
+*.log
+
+# Local editor and Streamlit runtime state
+.vscode/*.log
+.streamlit/secrets.toml
