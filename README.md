@@ -36,6 +36,8 @@ python -m streamlit run main.py
 
 គម្រោងមាន [Dockerfile](Dockerfile) និង [render.yaml](render.yaml) រួចស្រេចសម្រាប់ deploy ជា Web App សាធារណៈនៅលើ Render។
 
+[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/langchhely-ui/MLK-Khmer-voice/tree/public-video-transcriber)
+
 1. បញ្ចូលឯកសារគម្រោងទៅ GitHub repository របស់អ្នក។ កុំបញ្ចូល `.venv` ឬឯកសារសំឡេង/វីដេអូរបស់អ្នក។
 2. ចូល Render ហើយជ្រើស **New → Blueprint**។ ភ្ជាប់ GitHub repository នោះ ហើយ Render នឹងស្គាល់ `render.yaml` ដោយស្វ័យប្រវត្តិ។
 3. ជ្រើស plan **Standard ឬខ្ពស់ជាងនេះ**។ វាមាន 2 GB RAM ដែលសមស្របសម្រាប់ Whisper Small; Free និង Starter មាន 512 MB ប៉ុណ្ណោះ។ Free plan សម្រាប់សាកល្បងប៉ុណ្ណោះ ព្រោះវាបិទ service បន្ទាប់ពីមិនមានអ្នកប្រើ 15 នាទី។

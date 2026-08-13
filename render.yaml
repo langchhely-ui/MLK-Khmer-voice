@@ -3,6 +3,7 @@ services:
   - type: web
     name: khmer-video-transcriber
     runtime: docker
+    branch: public-video-transcriber
     # Standard provides 2 GB RAM, suitable for the bundled Whisper Small model.
     plan: standard
     healthCheckPath: /_stcore/health
