@@ -41,7 +41,7 @@ python -m streamlit run main.py
 1. បញ្ចូលឯកសារគម្រោងទៅ GitHub repository របស់អ្នក។ កុំបញ្ចូល `.venv` ឬឯកសារសំឡេង/វីដេអូរបស់អ្នក។
 2. ចូល Render ហើយជ្រើស **New → Blueprint**។ ភ្ជាប់ GitHub repository នោះ ហើយ Render នឹងស្គាល់ `render.yaml` ដោយស្វ័យប្រវត្តិ។
 3. ជ្រើស plan **Standard ឬខ្ពស់ជាងនេះ**។ វាមាន 2 GB RAM ដែលសមស្របសម្រាប់ Whisper Small; Free និង Starter មាន 512 MB ប៉ុណ្ណោះ។ Free plan សម្រាប់សាកល្បងប៉ុណ្ណោះ ព្រោះវាបិទ service បន្ទាប់ពីមិនមានអ្នកប្រើ 15 នាទី។
-4. បន្ទាប់ពី deploy រួច អ្នកនឹងទទួលបាន link `https://khmer-video-transcriber.onrender.com` (ឈ្មោះពិតអាចខុសតាម service ដែលមាន) ដែលអាចចែករំលែកឲ្យគ្រប់គ្នាប្រើ។
+4. បន្ទាប់ពី deploy រួច អ្នកនឹងទទួលបាន link `https://mlk-khmer-transcriber-langchhely.onrender.com` (Render អាចប្ដូរឈ្មោះប្រសិនបើវាត្រូវបានប្រើរួច) ដែលអាចចែករំលែកឲ្យគ្រប់គ្នាប្រើ។
 5. សម្រាប់ link ថេរផ្ទាល់ខ្លួន ដូចជា `https://transcribe.yourdomain.com` សូមទិញ/ប្រើ domain របស់អ្នក រួចបញ្ចូលវានៅ **Settings → Custom Domains** ក្នុង Render និងធ្វើតាម DNS records ដែល Render បង្ហាញ។ HTTPS certificate ត្រូវបានបង្កើត និងបន្តសុពលភាពដោយស្វ័យប្រវត្តិ។
 
 Link មិនអាចធានា “អចិន្ត្រៃយ៍” ដោយគ្មានលក្ខខណ្ឌបានទេ៖ វានឹងនៅដំណើរការដរាបណាអ្នករក្សាគណនី hosting, បង់ plan ដែលជ្រើស និងបន្ត domain របស់អ្នក។

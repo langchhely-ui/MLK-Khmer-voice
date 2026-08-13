@@ -1,7 +1,7 @@
 # Render Blueprint: deploy from a Git repository with a single click.
 services:
   - type: web
-    name: khmer-video-transcriber
+    name: mlk-khmer-transcriber-langchhely
     runtime: docker
     branch: public-video-transcriber
     # Standard provides 2 GB RAM, suitable for the bundled Whisper Small model.
