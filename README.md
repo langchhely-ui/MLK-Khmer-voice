@@ -1,45 +1,45 @@
-# ខ្មែរ អត្ថបទទៅសំឡេង
+# បម្លែងវីដេអូទៅអក្សរ
 
-កម្មវិធី Streamlit សម្រាប់បម្លែងអត្ថបទ និងឯកសារទៅជាសំឡេង MP3 ភាសាខ្មែរ។ វាអាចអាន TXT, SRT, VTT, MD, CSV, RTF, DOCX និង PDF។ សម្រាប់ឯកសារ subtitle (`.srt` / `.vtt`) វានឹងដកលេខ និងពេលវេលាចេញ ហើយអានតែអត្ថបទ។
+កម្មវិធី Streamlit សម្រាប់បម្លែងសំឡេងក្នុងវីដេអូ ឬឯកសារសំឡេងទៅជាអក្សរ។ វាបង្កើត subtitle មានពេលវេលា ហើយអាចទាញយកជា **TXT, SRT, STR, VTT** ឬ ZIP ដែលរួមបញ្ចូលទាំងអស់។
 
-ទំព័រ **អ្នកនិទានរឿង** មានរចនាប័ទ្មសាច់រឿង ៥ ប្រភេទ ដើម្បីជួយកំណត់ទឹកដម និងល្បឿនអានឲ្យធម្មជាតិជាងមុន។ វាប្រើសំឡេង AI neural ដូច្នេះមិនមែនជាការថតសំឡេងមនុស្សពិតទេ។
+## អ្វីដែលវាធ្វើបាន
 
-## សំឡេងតួអង្គ (RVC)
+- គាំទ្រ MP4, MOV, MKV, AVI, WebM, MP3, WAV, M4A, AAC, OGG និង FLAC
+- ជ្រើសភាសាខ្មែរ ឬឱ្យ Whisper ស្គាល់ភាសាដោយស្វ័យប្រវត្តិ
+- បង្កើត SRT/STR និង VTT ដោយមាន timecode សម្រាប់ដាក់ subtitle
+- ដំណើរការដោយ local Whisper; ឯកសាររបស់អ្នកមិនត្រូវផ្ញើទៅ API ខាងក្រៅទេ
+- អាចជ្រើស CPU ឬ NVIDIA GPU (CUDA)
 
-នៅទំព័រ **អ្នកនិទានរឿង** អាចបើក **បម្លែងជា​សំឡេងតួអង្គ** ដើម្បីបម្លែង MP3 Khmer ដែលបង្កើតរួចតាម RVC model។ ជម្រើសដែលបានបញ្ចូលរួមមាន ដូណាស់ត្រាំ, បារ៉ាក់អូបាម៉ា, បូណា, ផានិត, មាស សាម៉ន, ម៉ូនីកា, រតន និង ហេង។ ការបម្លែងនេះត្រូវការរយៈពេលបន្ថែម ជាពិសេសលើម៉ាស៊ីនដែលគ្មាន GPU។ ប្រើតែសំឡេង ឬ model ដែលអ្នកមានសិទ្ធិប្រើប្រាស់ប៉ុណ្ណោះ។
+## ដំឡើង និងបើក
 
-ជ្រើស **លឿន — សាកសមសម្រាប់ CPU** សម្រាប់អត្ថបទវែង ឬម៉ាស៊ីនគ្មាន GPU។ របៀប **គុណភាពខ្ពស់** ប្រើ RMVPE ដើម្បីប៉ាន់ប្រមាណ pitch បានល្អជាង ប៉ុន្តែយឺតជាងគួរឱ្យកត់សម្គាល់។
-
-### កំណែអនឡាញដោយគ្មាន RVC
-
-ពេល deploy ទៅ hosting សូមកំណត់ environment variable `ENABLE_RVC=0`។ កំណែអនឡាញនឹងលាក់ model RVC ទាំងអស់ និងផ្តល់តែការបម្លែងអត្ថបទ Khmer ទៅ MP3។ នៅលើ PC របស់អ្នក មិនចាំបាច់កំណត់អ្វីទេ—RVC នៅតែបើកជាធម្មតា។
-
-សម្រាប់ **Streamlit Community Cloud** សូមជ្រើស `app_online.py` ជា entrypoint។ ឯកសារនេះបិទ RVC ជាអចិន្ត្រៃយ៍សម្រាប់កំណែ online ដូច្នេះមិនចាំបាច់កំណត់ environment variable ទេ។
-
-## បោះពុម្ពផ្សាយលើអ៊ីនធឺណិត
-
-1. បង្កើត GitHub repository ថ្មី ហើយបញ្ចូលឯកសារគម្រោងនេះ។ `.gitignore` នឹងមិនបញ្ចូល RVC models និង runtime ក្នុង repository ទេ។
-2. ចូល [Streamlit Community Cloud](https://share.streamlit.io/) ដោយប្រើគណនី GitHub របស់អ្នក។
-3. ជ្រើស repository របស់អ្នក ហើយកំណត់ **Main file path** ជា `app_online.py`។
-4. ជ្រើស URL subdomain ដែលអ្នកចង់បាន រួចចុច Deploy។
-
-បន្ទាប់ពី deploy កម្មវិធីនឹងមាន URL `*.streamlit.app` សម្រាប់ចែករំលែក។ URL នោះនៅថេរដរាបណា app នៅតែត្រូវបានរក្សាទុកនៅលើ hosting។
-
-## ដំឡើង និងបើកកម្មវិធី
+ត្រូវមាន Python 3.10 ឬថ្មីជាងនេះ។ បើក PowerShell នៅក្នុងថតគម្រោង ហើយរត់៖
 
 ```powershell
+python -m venv .venv
+.\.venv\Scripts\Activate.ps1
+python -m pip install --upgrade pip
 python -m pip install -r requirements.txt
-python -m streamlit run app.py
+python -m streamlit run main.py
 ```
 
-បន្ទាប់មកបើកតំណដែល Streamlit បង្ហាញក្នុង browser។ ពេលបម្លែងសំឡេង ត្រូវភ្ជាប់អ៊ីនធឺណិត ដើម្បីប្រើ Khmer neural voice របស់ Microsoft Edge.
+បើ PowerShell មិនអនុញ្ញាតឱ្យ activate virtual environment សូមប្រើពាក្យបញ្ជានេះដោយផ្ទាល់៖
 
-អ្នកក៏អាចចុចពីរដងលើ `run_app.bat` ដើម្បីបើកកម្មវិធីបានផងដែរ។
+```powershell
+.\.venv\Scripts\python.exe -m streamlit run main.py
+```
 
-## របៀបប្រើ
+លើកដំបូងដែលអ្នកជ្រើស model មួយ Faster-Whisper នឹងទាញយក model នោះ។ សម្រាប់ការបំប្លែងភាសាខ្មែរ យើងណែនាំ **Small** ឬ **Medium**។
 
-1. អាប់ឡូដឯកសារ ឬវាយ/បិទភ្ជាប់អត្ថបទ។
-2. ជ្រើសសំឡេង ប្ដូរល្បឿន និងកម្ពស់សំឡេងតាមចិត្ត។
-3. ចុច **បង្កើត MP3** ហើយអាចស្ដាប់ ឬទាញយកឯកសារ MP3 បាន។
+> `STR` មិនមែនជានាមទ្រង់ទ្រាយ subtitle ស្តង់ដារទេ ប៉ុន្តែកម្មវិធីផ្ដល់វាជាច្បាប់ចម្លងនៃ SRT ដើម្បីឆបគ្នានឹងប្រព័ន្ធដែលទាមទារ extension `.str`។
 
-> ចំណាំ៖ ឯកសារ PDF ដែលជារូបថតស្កេនគ្មានអត្ថបទជាប់ក្នុងឯកសារ អាចត្រូវការ OCR មុននឹងអានបាន។
+## ដាក់ឲ្យប្រើសាធារណៈ
+
+គម្រោងមាន [Dockerfile](Dockerfile) និង [render.yaml](render.yaml) រួចស្រេចសម្រាប់ deploy ជា Web App សាធារណៈនៅលើ Render។
+
+1. បញ្ចូលឯកសារគម្រោងទៅ GitHub repository របស់អ្នក។ កុំបញ្ចូល `.venv` ឬឯកសារសំឡេង/វីដេអូរបស់អ្នក។
+2. ចូល Render ហើយជ្រើស **New → Blueprint**។ ភ្ជាប់ GitHub repository នោះ ហើយ Render នឹងស្គាល់ `render.yaml` ដោយស្វ័យប្រវត្តិ។
+3. ជ្រើស plan **Standard ឬខ្ពស់ជាងនេះ**។ វាមាន 2 GB RAM ដែលសមស្របសម្រាប់ Whisper Small; Free និង Starter មាន 512 MB ប៉ុណ្ណោះ។ Free plan សម្រាប់សាកល្បងប៉ុណ្ណោះ ព្រោះវាបិទ service បន្ទាប់ពីមិនមានអ្នកប្រើ 15 នាទី។
+4. បន្ទាប់ពី deploy រួច អ្នកនឹងទទួលបាន link `https://khmer-video-transcriber.onrender.com` (ឈ្មោះពិតអាចខុសតាម service ដែលមាន) ដែលអាចចែករំលែកឲ្យគ្រប់គ្នាប្រើ។
+5. សម្រាប់ link ថេរផ្ទាល់ខ្លួន ដូចជា `https://transcribe.yourdomain.com` សូមទិញ/ប្រើ domain របស់អ្នក រួចបញ្ចូលវានៅ **Settings → Custom Domains** ក្នុង Render និងធ្វើតាម DNS records ដែល Render បង្ហាញ។ HTTPS certificate ត្រូវបានបង្កើត និងបន្តសុពលភាពដោយស្វ័យប្រវត្តិ។
+
+Link មិនអាចធានា “អចិន្ត្រៃយ៍” ដោយគ្មានលក្ខខណ្ឌបានទេ៖ វានឹងនៅដំណើរការដរាបណាអ្នករក្សាគណនី hosting, បង់ plan ដែលជ្រើស និងបន្ត domain របស់អ្នក។

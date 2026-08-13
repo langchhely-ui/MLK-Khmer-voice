@@ -1,0 +1,8 @@
+# Render Blueprint: deploy from a Git repository with a single click.
+services:
+  - type: web
+    name: khmer-video-transcriber
+    runtime: docker
+    # Standard provides 2 GB RAM, suitable for the bundled Whisper Small model.
+    plan: standard
+    healthCheckPath: /_stcore/health

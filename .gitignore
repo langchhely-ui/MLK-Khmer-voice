@@ -1,4 +1,5 @@
-# Local RVC runtime, models, and downloaded weights stay on this PC only.
+# Local Python environment and downloaded AI models
+.venv/
 .rvc-runtime/
 .pth file Model/
 rvc_assets/

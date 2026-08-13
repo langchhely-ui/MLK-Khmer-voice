@@ -5,3 +5,10 @@ backgroundColor = "#FFFAF3"
 secondaryBackgroundColor = "#F1F8F2"
 textColor = "#17261D"
 font = "sans serif"
+baseRadius = "medium"
+buttonRadius = "medium"
+showWidgetBorder = true
+showSidebarBorder = true
+
+[server]
+maxUploadSize = 2048

@@ -1,0 +1,11 @@
+.git/
+.venv/
+__pycache__/
+*.py[cod]
+*.log
+.streamlit-server.log
+.streamlit-server-error.log
+.rvc-runtime/
+.pth file Model/
+rvc_assets/
+rvc_bridge.py
